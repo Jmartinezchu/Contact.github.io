@@ -1,0 +1,294 @@
+
+/*===========================
+  COMMON css 
+===========================*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --font: "Inter", sans-serif;
+  --body-color: #637381;
+  --heading-color: #212b36;
+  --primary-color: #3056d3;
+  --white: #ffffff;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: normal;
+  font-style: normal;
+  color: var(--body-color);
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a,
+button,
+input,
+textarea {
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+a,
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+i,
+span,
+a {
+  display: inline-block;
+}
+
+
+h2,
+h3,
+h5 {
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--body-color);
+  margin: 0px;
+}
+
+
+/*===== All Button Style =====*/
+.ud-main-btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 15px 25px;
+  border: 1px solid transparent;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 5;
+  -webkit-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  background: var(--primary-color);
+}
+
+.ud-main-btn:hover {
+  color: var(--white);
+  background: var(--heading-color);
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* ===== Contact CSS ===== */
+.ud-contact {
+  padding: 120px 0px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .ud-contact {
+    padding: 80px 0;
+  }
+}
+
+.ud-contact::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 50%;
+  background: #f3f4fe;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ud-contact::after {
+    height: 45%;
+  }
+}
+
+.ud-contact-title {
+  margin-bottom: 150px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .ud-contact-title {
+    margin-bottom: 50px;
+  }
+}
+
+.ud-contact-title span {
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.ud-contact-title h2 {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.ud-contact-info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .ud-contact-info-wrapper {
+    margin-bottom: 50px;
+  }
+}
+
+.ud-contact-info-wrapper .ud-single-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  width: 330px;
+  margin-bottom: 30px;
+}
+
+.ud-contact-info-wrapper .ud-info-icon {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-right: 24px;
+}
+
+.ud-contact-info-wrapper .ud-info-meta h5 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.ud-contact-info-wrapper .ud-info-meta p {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.ud-contact-form-wrapper {
+  -webkit-box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  background: var(--white);
+  padding: 60px;
+}
+
+@media (max-width: 767px) {
+  .ud-contact-form-wrapper {
+    padding: 40px 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .ud-contact-form-wrapper {
+    padding: 50px 40px;
+  }
+}
+
+.ud-contact-form-wrapper .ud-contact-form-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .ud-contact-form-wrapper .ud-contact-form-title {
+    font-size: 24px;
+  }
+}
+
+.ud-contact-form-wrapper .ud-form-group {
+  margin-bottom: 25px;
+}
+
+.ud-contact-form-wrapper .ud-form-group label {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.ud-contact-form-wrapper .ud-form-group input,
+.ud-contact-form-wrapper .ud-form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #f1f1f1;
+  resize: none;
+}
+
+.ud-contact-form-wrapper .ud-form-group input:focus,
+.ud-contact-form-wrapper .ud-form-group textarea:focus {
+  border-color: var(--primary-color);
+}
+
+input[type="text"], input[type="tel"],input[type="email"], textarea{
+  /* display: inline-block; */
+  border-bottom: 2px solid rgb(82, 84, 96) !important;
+  border-radius: 0 0 5px 5px;
+  padding: 0.5rem;
+}
+
+input[type="text"]:hover, input[type="tel"]:hover,input[type="email"]:hover, textarea:hover{
+  border-bottom: 2px solid var(--primary-color) !important;
+}
+textarea{
+  min-height: 5rem;
+  max-height: 7rem;
+}

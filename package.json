@@ -1,0 +1,12 @@
+{
+  "name": "Contacto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "purgecss --css assets/css/bootstrap.min.css --content contact.html -o assets/css/contacto_boo.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
